@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head ng-app="todoList">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.min.css"/>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="appTodoList.js"></script>
+	</head>
+	<body ng-controller="ListaController as todoList">		
+		<div ng-repeat="actividad in todoList.actividades">
+			<h1>{{actividad.name}}</h1>
+			<h2>${{actividad.price}}</h2>
+			<p>{{actividad.description}}</p>
+			<button ng-show="actividad.done">Hecha</button>
+		</div>		
+	</body>
+</html>
